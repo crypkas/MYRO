@@ -170,7 +170,7 @@ a:hover {
     color: #fff;
   }
   .outline-btn {
-    background: #050505;
+    background: #4bd1ac;
     color: #f8f7ff;
     border: 2px solid #f8f7ff;
   }
@@ -178,9 +178,9 @@ a:hover {
     flex: 1 1 400px;
     max-width: 500px;
     align-self: center;
-    border: 6px solid #ff885d;
+    border: 6px solid var(--primary-color);
     border-radius: 12px;
-    box-shadow: 0 0 10px #ff7c4370;
+    box-shadow: 0 0 10px #8a6a9c2a;
   }
   
   /* 
