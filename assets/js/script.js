@@ -15,12 +15,10 @@ faqItems.forEach((item) => {
 
 // Copy token address
 function copyAddress() {
-  const tokenAddr = document.getElementById('myroAddress').textContent.trim();
-  navigator.clipboard.writeText(tokenAddr)
-    .then(() => {
-      alert('Token address copied to clipboard!');
-    })
-    .catch(err => {
-      console.log('Failed to copy text: ', err);
-    });
+  const addressText = document.getElementById("myroAddress").textContent;
+  navigator.clipboard.writeText(addressText).then(() => {
+      alert("Address copied to clipboard!");
+  }).catch(err => {
+      console.error('Failed to copy: ', err);
+  });
 }
