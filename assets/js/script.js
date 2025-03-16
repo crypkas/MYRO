@@ -14,8 +14,7 @@ faqItems.forEach((item) => {
 });
 
 // Copy token address
-function copyAddress() {
-  const addressText = document.getElementById("myroAddress").textContent;
+function copyAddress(addressText) {
   navigator.clipboard.writeText(addressText).then(() => {
       alert("Address copied to clipboard!");
   }).catch(err => {
