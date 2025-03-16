@@ -4,7 +4,7 @@ Global Variables & Reset
 ========================================
 */
 :root {
-  --primary-color: #6a0dad; 
+  --primary-color: #6a0dad;
   --secondary-color: #b19cd9;
   --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   --text-color: #f8f7ff;
@@ -47,7 +47,9 @@ p {
   line-height: 1.6;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--primary-color);
   font-family: 'Grandstander', cursive;
 }
@@ -146,7 +148,7 @@ nav ul li a {
   .menu-btn {
     display: none;
   }
-  
+
 }
 
 /* 
@@ -198,29 +200,37 @@ Hero Section
 }
 
 .hero img.dog-hero {
-  width: 100%;                 /* Full width on smaller devices */
-  max-width: 500px;            /* Limit the max width on larger devices */
-  height: auto;                /* Maintain the aspect ratio */
+  width: 100%;
+  /* Full width on smaller devices */
+  max-width: 500px;
+  /* Limit the max width on larger devices */
+  height: auto;
+  /* Maintain the aspect ratio */
   align-self: center;
   border: 6px solid var(--primary-color);
   border-radius: 12px;
   box-shadow: 0 0 10px #8a6a9c2a;
-  object-fit: cover;           /* Ensures the image covers the container without stretching */
+  object-fit: cover;
+  /* Ensures the image covers the container without stretching */
 }
 
 /* Mobile Specific Adjustments */
 @media (max-width: 768px) {
   .hero img.dog-hero {
-    max-width: 100%;           /* Allow it to be full width on mobile */
-    border-width: 4px;         /* Reduce border thickness for smaller devices */
+    max-width: 100%;
+    /* Allow it to be full width on mobile */
+    border-width: 4px;
+    /* Reduce border thickness for smaller devices */
   }
 
   .hero .hero-content {
-    flex-direction: column;    /* Stack text and image vertically on mobile */
+    flex-direction: column;
+    /* Stack text and image vertically on mobile */
   }
 
   .hero .hero-text {
-    text-align: center;        /* Center the text for mobile */
+    text-align: center;
+    /* Center the text for mobile */
   }
 }
 
@@ -234,8 +244,10 @@ Hero Section
   }
 
   .hero .cta-buttons .btn {
-    width: 100%;            /* Full width on mobile */
-    max-width: 250px;       /* Consistent maximum width */
+    width: 100%;
+    /* Full width on mobile */
+    max-width: 250px;
+    /* Consistent maximum width */
     text-align: center;
     padding: 14px 24px;
     font-size: 16px;
@@ -270,7 +282,6 @@ Buttons
 .outline-btn {
   background: #4bd1ac;
   color: var(--text-color);
-  border: 2px solid var(--text-color);
 }
 
 .copy-btn {
@@ -378,6 +389,7 @@ footer {
   gap: 16px;
 }
 
+
 /* Exchange Gallery Section */
 .exchange-gallery {
   margin-bottom: 120px;
@@ -391,7 +403,6 @@ footer {
   letter-spacing: 1px;
 }
 
-
 /* Gallery Grid */
 .gallery-grid {
   display: grid;
@@ -401,12 +412,13 @@ footer {
   align-items: center;
 }
 
-/* Gallery Images */
-.gallery-grid img {
-  width: 100%;
-  max-width: 140px;
-  height: auto;
-  padding: 10px;
+/* Gallery Image Wrapper for Consistent Size */
+.gallery-grid .exchange-item {
+  width: 140px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: rgba(255, 255, 255, 0.05);
   border-radius: 12px;
   border: 2px solid rgba(255, 255, 255, 0.1);
@@ -414,8 +426,15 @@ footer {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+/* Gallery Images */
+.gallery-grid img {
+  max-width: 100%;
+  max-height: 80%;
+  object-fit: contain;
+}
+
 /* Hover Effect */
-.gallery-grid img:hover {
+.gallery-grid .exchange-item:hover {
   transform: scale(1.1);
   opacity: 0.9;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
@@ -428,8 +447,152 @@ footer {
     gap: 16px;
   }
 
-  .gallery-grid img {
-    max-width: 100px;
-    padding: 8px;
+  .gallery-grid .exchange-item {
+    width: 100px;
+    height: 80px;
   }
+
+  .gallery-grid img {
+    max-height: 70%;
+  }
+}
+
+.faq-section {
+  margin-bottom: 130px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.faq-item {
+  border: 4px solid #f8f7ff;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.faq-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.faq-item p {
+  display: none;
+  font-size: 1.05rem;
+}
+
+.faq-item.active {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.faq-item.active p {
+  display: block;
+  margin-top: 8px;
+}
+
+/* 
+  ------------------------------
+  Social or FAQ
+  ------------------------------
+  */
+.social-section {
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.social-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.social-icons {
+  display: inline-flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-flex;
+  transition: 0.3s;
+  width: 64px;
+  height: 64px;
+}
+
+.social-icons a img {
+  width: 100%;
+  height: auto;
+}
+
+/* 
+  ------------------------------
+  Tokenomics 
+  ------------------------------
+  */
+.tokenomics {
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.tokenomics h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tokenomics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+}
+
+.tokenomics-item {
+  padding: 20px;
+  border: 4px solid #f8f7ff;
+  border-radius: 16px;
+  text-align: center;
+  background: #1a1a1a;
+}
+
+.tokenomics-item .label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #ff885d;
+}
+
+.tokenomics-item .value {
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+.tok-address {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.tok-address button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #f8f7ff;
+  color: #050505;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tok-address button:hover {
+  opacity: 0.7;
 }
