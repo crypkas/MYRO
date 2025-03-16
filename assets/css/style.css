@@ -102,7 +102,6 @@ nav {
   position: absolute;
   top: 30px;
   right: 10%;
-  background: rgba(0, 0, 0, 0.8);
   padding: 10px 20px;
   border-radius: 8px;
   z-index: 10;
@@ -197,6 +196,10 @@ Hero Section
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+}
+
+.hero .hero-text .cta-buttons a {
+  display: inline;
 }
 
 .hero img.dog-hero {
@@ -323,13 +326,33 @@ About Section
 }
 
 .about img {
-  flex: 1 1 400px;
-  border: 4px solid var(--text-color);
+  flex: 1 1 300px;
+  max-width: 400px;
+  height: auto;
+  border: 4px solid #f8f7ff;
   border-radius: 15px;
+  transition: transform 0.3s ease;
 }
 
 .about .about-text {
   flex: 1 1 480px;
+}
+
+/* Hover Effect (Optional) */
+.about img:hover {
+  transform: scale(1.05);
+}
+
+/* About Image - Mobile */
+@media (max-width: 768px) {
+  .about img {
+    max-width: 250px;
+    flex: 1 1 100%;
+  }
+
+  .about {
+    justify-content: center;
+  }
 }
 
 /* 
@@ -431,6 +454,7 @@ footer {
   max-width: 100%;
   max-height: 80%;
   object-fit: contain;
+  padding: 2px;
 }
 
 /* Hover Effect */
